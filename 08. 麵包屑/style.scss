@@ -1,0 +1,44 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body{
+  background-color: #562879;
+}
+.wrap{
+  padding: 10px 0;
+  background-color: #ec008b;
+  box-shadow:  0px 5px hsla(260,100%,20%,.5);
+}
+.breadcrumb{
+  width: 90%;
+  margin: auto;
+  display: flex;
+}
+.breadcrumb li{
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+}
+.breadcrumb a{
+  text-decoration: none;
+  color:#fff;
+}
+.breadcrumb a:hover{
+  color:#ff0;
+}
+// last-child 可以選到最後一個子物件
+.breadcrumb li:last-child a{
+  color:#ff0;
+}
+// breadcrumb 物件的 li 後的第一個 li
+.breadcrumb li + li{
+  padding-left: 0;
+}
+// breadcrumb 物件的 li 後的第一個 li 它的偽元素
+.breadcrumb li + li:before{
+  content :'>';
+  color:#fff;
+  margin-right: 20px;
+}
