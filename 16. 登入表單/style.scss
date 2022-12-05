@@ -1,0 +1,61 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+html,body{
+  height: 100%;
+}
+body{
+  background: url('https://images.unsplash.com/photo-1670140271803-c6dc20497ac0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0MXx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=60') no-repeat center center / cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login{
+  width: 500px;
+  height: 500px;
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 10px;
+  border:10px solid #fff;
+  color:#fff;
+  box-shadow: 0 0 60px #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* 濾鏡 (blur 毛玻璃) */
+  backdrop-filter: blur(5px);
+}
+.form h2{
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #fff;
+}
+.form .group{
+  margin-bottom: 20px;
+}
+.form label{
+  line-height: 2;
+}
+.form input{
+    width: 100%;
+    border: 1px solid #aaa;
+    line-height: 3;
+    border-radius: 5px;
+}
+.form .btn-group{
+  margin-top: 50px;
+  font-size: 0; /*去除按鈕之間的空白部分*/
+}
+.form .btn{
+  font-size: 20px;
+  border-radius: 5px;
+  border:none;
+  background-color: #6ab4fe;
+  width: 190px;
+  padding: 10px 0;
+  color:#fff;
+}
+.form .btn + .btn {
+  margin-left: 20px;
+}
