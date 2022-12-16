@@ -1,0 +1,52 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.container {
+  width: 1200px;
+  margin: auto;
+  padding: 100px 0;
+}
+
+.container h1 {
+  box-sizing: border-box;
+  padding: 0 15px;
+  margin-bottom: 30px;
+  font-size: 70px;
+  color: #aaa;
+  position: relative;
+}
+
+.container h1:after {
+  content: "";
+  display: block;
+  height: 45px;
+  /*------ 使用絕對定位寬度會不見，所以 width 要 100% ------*/
+  width: 100%;
+  bottom: 0;
+  background-color: #eee;
+  position: absolute;
+  z-index: -1;
+}
+
+.container .txt {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 15px;
+  /* 兩欄 */
+  -moz-column-count: 2;
+       column-count: 2;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+
+/* 首字放大 */
+.container .txt p::first-letter {
+  font-size: 40px;
+  /* 使用 float 文繞圖 */
+  float: left;
+  padding-right: 10px;
+}/*# sourceMappingURL=style.css.map */

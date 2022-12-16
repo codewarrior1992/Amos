@@ -1,0 +1,35 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.container{
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  padding: 100px 0;
+}
+.container h1{
+  width: 400px;
+  text-align: right;
+  box-sizing: border-box;
+  padding: 0 15px;
+  background-color: #D5C789;
+}
+.container h1:after{
+  content:'';
+  display: block;
+  height: 4px;
+  width: 4em;
+  background-color: #000;
+  margin-left: auto;
+}
+.container .txt {
+  width: 800px;
+  box-sizing: border-box;
+  padding: 0 15px;
+  /* 排成兩欄 */
+  column-count: 2;
+  /* 中間的間隔 */
+  column-gap: 30px;
+}

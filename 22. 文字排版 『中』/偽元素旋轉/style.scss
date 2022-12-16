@@ -1,0 +1,39 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.container{
+  position: relative;
+  width: 1200px;
+  margin: auto;
+}
+.container h1{
+  width: 400px;
+  box-sizing: border-box;
+  padding: 15px;
+  /**/
+  float: right;
+  font-size: 90px;
+  color:#aaa;
+  position: relative;
+}
+.container h1:before{
+  content:'';
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border:30px solid #f1c555;
+  z-index: -1;
+  bottom:0;
+  transform: rotate(20deg);
+  /* display: block; 其實轉為絕對定位時就已經是 block*/
+}
+.container .txt{
+  column-count: 2;
+  column-gap: 30px;
+}
+.container p{
+  line-height: 1.6;
+  margin-bottom: 1.5em;
+}

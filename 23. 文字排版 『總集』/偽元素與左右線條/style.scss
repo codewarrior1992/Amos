@@ -1,0 +1,50 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.wrap{
+  margin: 100px 0;
+}
+.container{
+  width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+/* ------ 主要改動  ------*/
+.container h1 {
+  box-sizing: border-box;
+  font-size: 70px;
+  width: 100%;
+  margin-bottom: 0.5em;
+  display: flex;
+}
+.container h1::before,
+.container h1::after {
+  content:'';
+  display: block;
+  height: 1px;
+  // width: 4em;
+  background-color: #aaa;
+  margin: auto;
+  /* flex-grow 就是讓區塊自動填滿，有了這個 width 也就不需要了*/
+  flex-grow: 1;
+} 
+
+/* 由於使用 flex-grow 自動填滿會讓直線太貼近文字，所以可以用 margin 將左右往外推 */
+.container h1::before{
+  margin-right: 1em;
+}
+.container h1::after{
+  margin-left: 1em;
+}
+/* ------ 主要改動 ------ */
+
+.container .txt {
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+.container .txt p {
+  margin-bottom: 1em;
+}

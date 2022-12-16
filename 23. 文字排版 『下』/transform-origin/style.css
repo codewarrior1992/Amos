@@ -1,0 +1,57 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.wrap {
+  margin: 100px 0;
+}
+
+.container {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  position: relative;
+}
+
+.container h1 {
+  width: 400px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  font-size: 40px;
+  padding-left: 15px;
+  color: #aaa;
+  transform: rotate(90deg) translateY(-400px);
+  transform-origin: left top;
+  /* 或是 */
+  /*
+    transform: rotate(90deg);
+    transform-origin: left top;
+    position: relative;
+    left:400px;
+  */
+}
+
+.container .txt {
+  width: 800px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  -moz-column-count: 2;
+       column-count: 2;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  padding: 15px;
+  box-shadow: 0 0 30px #ccc;
+}
+
+.container .txt p {
+  margin-bottom: 1em;
+}
+
+.container .txt p:first-child::first-letter {
+  font-size: 60px;
+  float: left;
+  padding-right: 10px;
+}/*# sourceMappingURL=style.css.map */

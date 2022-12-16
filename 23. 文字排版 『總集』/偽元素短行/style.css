@@ -1,0 +1,45 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.wrap {
+  margin: 100px 0;
+}
+
+.container {
+  width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.container h1 {
+  flex-shrink: 0;
+  box-sizing: border-box;
+  padding-left: 15px;
+  left: 0;
+  font-size: 90px;
+  width: 100%;
+  margin-bottom: 0.5em;
+}
+
+.container h1::after {
+  content: "";
+  /* 必須要有 block 偽元素才會正確顯示 */
+  display: block;
+  height: 1px;
+  width: 2em;
+  background-color: #aaa;
+  margin: auto;
+}
+
+.container .txt {
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.container .txt p {
+  margin-bottom: 1em;
+}/*# sourceMappingURL=style.css.map */

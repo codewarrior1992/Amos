@@ -1,0 +1,52 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.wrap{
+  margin: 100px 0;
+}
+.container{
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  box-shadow:  0 0 30px #ccc;
+  /*以下為改動區域*/
+  overflow: hidden;
+}
+.container h1 {
+  flex-shrink: 0;
+  box-sizing: border-box;
+  padding-left: 15px;
+    /*以下為改動區域*/
+  position: absolute;
+  left:0;
+  font-size: 190px;
+  width: 100%;
+  color:#ddd;
+  left:0;
+  top:20px;
+  line-height: 1.1em;
+  opacity: .5;
+}
+
+.container .txt {
+  width: 600px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  column-count: 2;
+  column-gap: 30px;
+  padding: 15px;
+  // box-shadow:  0 0 30px #ccc;
+}
+.container .txt p {
+  margin-bottom: 1em;
+}
+
+.container .txt p:first-child::first-letter {
+  font-size: 60px;
+  float: left;
+  padding-right: 10px;
+}

@@ -1,0 +1,84 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.banner{
+  height: 700px;
+  background: url('https://images.unsplash.com/photo-1670509784598-a33e9e087dff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=600&q=60') center top / cover;
+}
+.sec .container{
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  padding: 100px 0;
+  /* 因為會被 box-shadow 蓋住，所以要使用　z-index 提升圖層 */
+  position: relative;
+  z-index: 2;
+}
+.sec .item{
+  width: 570px;
+  margin: 0 15px;
+}
+.sec .item h2{
+  margin-bottom: 1.3em;
+}
+.sec .item p{
+  line-height: 1.7;
+  margin-bottom: 1.6em;
+}
+/* 開始 */
+.sec{
+  position: relative;
+}
+.sec::after{
+  content: '';
+  display: block;
+  position: absolute;
+  width: 200px;height: 200px;
+  background-color: #fff;
+  top:0;
+  left:50%;
+  transform: translateX(-30%) translateY(-50%);
+  border-radius: 50%;
+  /*使用 box shadow(x軸、y軸、模糊區域) 做出不規則徒刑*/
+  box-shadow: 178px 0 0 30px #fff,
+              327px 34px 0 20px #fff,
+              480px 9px 0 60px #fff,
+              690px 71px 0 60px #fff,
+              880px 0 0 89px #fff,
+
+              /* --- 圖形反向 --- */
+              -178px 0 0 30px #fff,
+              -327px 34px 0 20px #fff,
+              -480px 9px 0 60px #fff,
+              -690px 71px 0 60px #fff,
+              -880px 0 0 89px #fff,
+              -1100px 50px 0 89px #fff,
+
+              /* --- 陰影正向 --- */
+              100px 0px 0 56px rgba(0,0,10,.5),
+              298px 10px 0 56px rgba(0,0,10,.5),
+              540px -40px 0 50px rgba(0,0,10,.5),
+              740px -30px 0 30px rgba(0,0,10,.5),
+              880px -100px 0 80px rgba(0,0,10,.5),
+              1000px 0px 0 80px rgba(0,0,10,.5),
+              /* --- 陰影反向 --- */
+              -60px 0px 0 56px rgba(0,0,10,.5),
+              -298px 10px 0 56px rgba(0,0,10,.5),
+              -540px -40px 0 50px rgba(0,0,10,.5),
+              -740px -30px 0 30px rgba(0,0,10,.5),
+              -780px -70px 0 80px rgba(0,0,10,.5),
+              -1200px 0px 0 80px rgba(0,0,10,.5);
+}
+
+.sec::before{
+  content:'';
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  background-color: #fff;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
